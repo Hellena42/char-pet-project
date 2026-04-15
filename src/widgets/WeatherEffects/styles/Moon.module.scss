@@ -8,6 +8,10 @@
   pointer-events: none;
   transform: translateX(-50%);
   z-index: 15;
+
+  @media (max-width: 413px) {
+    width: 300px;
+  }
 }
 
 .star {

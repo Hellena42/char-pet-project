@@ -23,6 +23,10 @@
       -30px 250px 0 rgba(255, 255, 255, 0.2);
     animation: rain-fall 0.4s linear infinite;
   }
+
+  @media (max-width: 413px) {
+    width: 300px;
+  }
 }
 
 .rainZone span {

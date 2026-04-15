@@ -21,8 +21,6 @@ const ButtonBase = forwardRef<HTMLButtonElement, ButtonProps>(
     ...rest
   } = props;
 
-  console.log(rest.onClick)
-
   return (
     <button
       {...rest}
