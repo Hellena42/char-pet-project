@@ -1,5 +1,4 @@
 import { dashboardBg } from '@/assets';
-import { useMoodStore } from '@/widgets/MoodIndicator/model/useMoodStore';
 import { MoodIndicator } from '@/widgets/MoodIndicator/ui/MoodIndicator';
 import { useCharacterImage } from '../model/useCharacterImage';
 import { useMatches } from 'react-router-dom';
@@ -24,7 +23,7 @@ export const BackgroundLayer = () => {
   const bg: any = {
     dashboard: dashboardBg
   }
-  
+
   // const {currentBg }: WorldStore = {currentBg: ''};
   // const moodIcons = WidgetIcons.character;
   // const displayedMood = useMoodStore((s) => s.getDisplayMood());
