@@ -1,0 +1,77 @@
+.rainZone {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  &.heavy span {
+    animation: rain-fall 0.2s linear infinite;
+    box-shadow: 
+      20px 150px 0 rgba(255, 255, 255, 0.3), 
+      -30px 250px 0 rgba(255, 255, 255, 0.2),
+      50px 100px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  &.thunderstorm span {
+    box-shadow:
+      20px 150px 0 rgba(255, 255, 255, 0.3),
+      -30px 250px 0 rgba(255, 255, 255, 0.2);
+    animation: rain-fall 0.4s linear infinite;
+  }
+}
+
+.rainZone span {
+  position: absolute;
+  top: -50px;
+  width: 2px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  animation: rain-fall 0.5s linear infinite;
+}
+
+.rainZone span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.rainZone span:nth-child(2) { left: 30%; animation-delay: 0.1s; }
+.rainZone span:nth-child(3) { left: 50%; animation-delay: 0.2s; }
+.rainZone span:nth-child(4) { left: 70%; animation-delay: 0.15s; }
+.rainZone span:nth-child(5) { left: 90%; animation-delay: 0.25s; }
+
+//heavy
+.rainZone span:nth-child(6) { left: 15%; animation-delay: 0.05s; }
+.rainZone span:nth-child(7) { left: 35%; animation-delay: 0.12s; }
+.rainZone span:nth-child(8) { left: 55%; animation-delay: 0.08s; }
+.rainZone span:nth-child(9) { left: 75%; animation-delay: 0.22s; }
+.rainZone span:nth-child(10) { left: 95%; animation-delay: 0.18s; }
+
+@keyframes rain-fall {
+  0% { transform: translateY(0) skewX(-10deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(450px) skewX(-10deg); opacity: 0.3; }
+}
+
+.lightning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  animation: flash 4s ease-out infinite;
+  z-index: 1;
+}
+
+@keyframes flash {
+  0%   { opacity: 0; }
+  2%   { opacity: 0.8; }
+  4%   { opacity: 0.2; }
+  6%   { opacity: 1; }
+  10%  { opacity: 0; }
+  50%  { opacity: 0; }
+  100% { opacity: 0; }
+}
