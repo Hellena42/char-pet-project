@@ -1,1 +1,0 @@
-export { MobileMealPage } from './ui/MobileMealPage'
