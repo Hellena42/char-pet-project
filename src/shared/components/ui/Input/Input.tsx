@@ -1,6 +1,6 @@
 import { forwardRef, memo, type InputHTMLAttributes } from 'react';
 import { type LucideIcon } from 'lucide-react';
-import styles from './input.module.scss';
+import styles from './Input.module.scss';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
