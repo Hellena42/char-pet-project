@@ -1,0 +1,37 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.selectionPreviewWrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.selectionImgWrapper {
+  display: flex;
+  align-items: center;
+  animation: selectionPreview 1s ease-in-out forwards;
+
+  span {
+    font-size: 30px;
+    color: #25cb1d;
+  }
+}
+
+.selectionImg {
+  width: 110px;
+  margin-right: 15px;
+}
+
+@keyframes selectionPreview {
+  0%   { transform: scale(1.5); opacity: 0; }
+  30%  { transform: scale(1);   opacity: 1; }
+  70%  { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1);   opacity: 0; }
+}

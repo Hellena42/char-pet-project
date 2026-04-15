@@ -1,0 +1,57 @@
+@use './../base/variables' as vars;
+
+.paginationContainer {
+  display: flex;
+  margin-top: 15px;
+
+  &--end {
+    justify-content: end;
+  }
+}
+
+.rc-pagination-item {
+  margin-right: 4px!important;
+  border: 2px solid rgb(34, 34, 34)!important;
+  
+  a {
+    font-family: vars.$ff-comic-sans;
+    font-size: 12px;
+    color: #fff!important;
+  }
+
+  &-active {
+    border: 1px solid rgb(201, 54, 189)!important;
+    background: linear-gradient(25deg, rgb(98, 50, 101) 0%, rgb(156, 66, 141) 40%, rgb(182, 46, 155) 100%)!important;
+  }
+}
+
+.rc-pagination-prev button,
+.rc-pagination-next button {
+  color: #fff!important;
+  border: 2px solid rgb(34, 34, 34)!important;
+  border-radius: 10px 6px 8px 12px / 8px 12px 6px 10px;
+  background: linear-gradient(25deg, rgb(42, 54, 82) 0%, rgb(66, 82, 111) 40%, rgb(89, 94, 118) 100%);
+
+  &::after {
+    font-size: 16px;
+  }
+}
+
+.rc-pagination-disabled {
+  opacity: 0.6;
+}
+
+.rc-pagination-item:nth-child(3n + 1) {
+  border-radius: 10px 6px 8px 12px / 8px 12px 6px 10px;
+  background: linear-gradient(25deg, rgb(42, 54, 82) 0%, rgb(66, 82, 111) 40%, rgb(89, 94, 118) 100%);
+}
+
+.rc-pagination-item:nth-child(3n + 2) {
+  border-radius: 12px 6px 10px / 6px 10px 6px 14px;
+  background: linear-gradient(25deg, rgb(138, 137, 160) 0%, rgb(99, 108, 137) 45%, rgb(66, 82, 111) 100%);
+}
+
+.rc-pagination-item:nth-child(3n + 3) {
+  border-radius: 14px 6px 12px 4px / 4px 12px 8px 14px;
+  background: linear-gradient(25deg, rgb(89, 94, 118) 0%, rgb(99, 108, 137) 55%, rgb(42, 54, 82) 100%);
+}

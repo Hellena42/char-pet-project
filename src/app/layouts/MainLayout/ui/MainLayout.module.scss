@@ -1,0 +1,118 @@
+.layout {
+  height: 100vh;
+}
+
+.contentWrapper {
+  height: 100%;
+}
+
+.pukeEffect {
+  animation: pukeShake 2.5s ease-in-out infinite;
+}
+
+@keyframes pukeShake {
+  0%   { transform: translate(0,0) rotate(0deg); filter: blur(0px) hue-rotate(0deg) brightness(1); }
+  20%  { transform: translate(-3px, 2px) rotate(-1deg); filter: blur(1px) hue-rotate(30deg) brightness(0.9); }
+  40%  { transform: translate(2px, -3px) rotate(1deg); filter: blur(2px) hue-rotate(60deg) brightness(0.8); }
+  60%  { transform: translate(-2px, 2px) rotate(-1deg); filter: blur(1px) hue-rotate(90deg) brightness(0.9); }
+  80%  { transform: translate(3px, -2px) rotate(1deg); filter: blur(1px) hue-rotate(120deg) brightness(0.85); }
+  100% { transform: translate(0,0) rotate(0deg); filter: blur(0px) hue-rotate(0deg) brightness(1); }
+}
+
+.hangoverEffect {
+  animation: drunkEffect 8s infinite ease-in-out;
+  transition: filter 2s ease;
+}
+
+@keyframes drunkEffect {
+  0% {
+    filter: blur(0px) contrast(100%);
+    transform: scale(1) skew(0deg);
+  }
+  25% {
+    filter: blur(1px) contrast(110%);
+    transform: scale(1.01) skew(1deg) rotate(0.5deg);
+  }
+  50% {
+    filter: blur(2px) contrast(90%);
+    transform: scale(1.02) skew(-1deg) rotate(-0.5deg);
+  }
+  75% {
+    filter: blur(1px) contrast(105%);
+    transform: scale(1.01) skew(0.5deg) rotate(0.2deg);
+  }
+  100% {
+    filter: blur(0px) contrast(100%);
+    transform: scale(1) skew(0deg);
+  }
+}
+
+.sugarRushEffect {
+  animation: sugarHigh 0.2s linear infinite;
+  box-shadow: 0 0 15px rgba(255, 0, 222, 0.4);
+  transition: all 0.1s ease;
+}
+
+@keyframes sugarHigh {
+  0% {
+    transform: translate(0, 0) skew(0deg) scale(1);
+    filter: hue-rotate(0deg) brightness(1) contrast(1.2);
+  }
+  10% {
+    transform: translate(-2px, -3px) skew(2deg) scale(1.02);
+    filter: hue-rotate(90deg) brightness(1.3);
+  }
+  20% {
+    transform: translate(3px, 2px) skew(-3deg) scale(0.98);
+    filter: hue-rotate(180deg) brightness(1.5) drop-shadow(0 0 5px #ff00de);
+  }
+  30% {
+    transform: translate(-4px, 1px) skew(4deg) scale(1.05);
+    filter: hue-rotate(270deg) brightness(1.2);
+  }
+  40% {
+    transform: translate(4px, -2px) skew(-2deg) scale(1);
+    filter: hue-rotate(360deg) brightness(1.4) contrast(1.5);
+  }
+  50% {
+    transform: translate(-1px, 4px) skew(1deg) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) skew(0deg) scale(1);
+    filter: hue-rotate(720deg) brightness(1) contrast(1.2);
+  }
+}
+
+//
+.footer {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+.logBtn {
+  position: relative;
+  cursor: pointer;;
+
+  img {
+    width: 100px;
+    height: 78px;
+    object-fit: contain;
+  }
+  
+  span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-family: vars.$ff-caveat-brush;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    transform: translate(-50%, -10px);
+    z-index: 1;
+  }
+}
+
+.txtSm {
+  color: #fff;
+}

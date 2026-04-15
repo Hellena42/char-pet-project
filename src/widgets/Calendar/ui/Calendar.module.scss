@@ -1,0 +1,10 @@
+.calendarWidget {
+  position: relative;
+  width: 225px;
+}
+
+@media (max-width: 768px) {
+  .calendarWidget {
+    width: auto;
+  }
+}

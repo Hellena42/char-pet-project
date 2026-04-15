@@ -1,0 +1,19 @@
+.contentPanelBox {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+
+  &--max-height {
+    max-height: 85vh;
+  }
+}
+
+.mainContainer {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  height: calc(100% - 90px);
+  z-index: 11;
+}
