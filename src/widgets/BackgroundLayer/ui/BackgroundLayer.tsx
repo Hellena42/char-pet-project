@@ -6,9 +6,9 @@ import { useMatches } from 'react-router-dom';
 import styles from './BackgroundLayer.module.scss';
 import clsx from 'clsx';
 
-interface PageBg {
-  dashboard: string;
-}
+// interface PageBg {
+//   dashboard: string;
+// }
 
 // type PageBgKey = keyof PageBg;
 
@@ -24,13 +24,13 @@ export const BackgroundLayer = () => {
   const bg: any = {
     dashboard: dashboardBg
   }
+  
   // const {currentBg }: WorldStore = {currentBg: ''};
+  // const moodIcons = WidgetIcons.character;
+  // const displayedMood = useMoodStore((s) => s.getDisplayMood());
+  
   const currentBg = 'dashboard';
-
-    // const moodIcons = WidgetIcons.character;
-    const displayedMood = useMoodStore((s) => s.getDisplayMood());
-
-    const currentImage = useCharacterImage();
+  const currentImage = useCharacterImage();
 
   return (
     <div className={styles.wrapper}>

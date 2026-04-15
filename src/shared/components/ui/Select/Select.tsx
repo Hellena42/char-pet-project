@@ -1,4 +1,4 @@
-import { forwardRef, memo, useEffect, useRef, useState, type HTMLAttributes } from "react"
+import { forwardRef, memo, useEffect, useImperativeHandle, useRef, useState, type HTMLAttributes } from "react"
 import { DataNodeCard } from "@/shared/components/ui/DataNodeCard/DataNodeCard";
 import clsx from "clsx";
 import styles from './Select.module.scss';
@@ -34,6 +34,8 @@ const SelectBase = forwardRef<HTMLDivElement, SelectProps>((props, ref) => {
 
   const containerRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLUListElement>(null);
+
+  useImperativeHandle(ref, () => containerRef.current as HTMLDivElement);
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {

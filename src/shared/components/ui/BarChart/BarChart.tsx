@@ -16,7 +16,7 @@ export interface BarChartProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const BarChartBase = forwardRef<HTMLDivElement, BarChartProps>((props, ref) => {
-  const { data, color = '#7b2ff7', activeColor = '#bc13fe', onBarHover, hoveredBar, className } = props;
+  const { data, color = '#7b2ff7', activeColor = '#bc13fe', className } = props;
   // const hoverType = useMemo(
   //   () => hoverTypes[Math.floor(Math.random() * hoverTypes.length)],
   //   []

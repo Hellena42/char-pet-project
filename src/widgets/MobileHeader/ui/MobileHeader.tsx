@@ -1,5 +1,5 @@
 import { BurgerMenu } from "@/widgets/BurgerMenu/ui/BurgerMenu"
-import { ChevronLeft } from "lucide-react"
+// import { ChevronLeft } from "lucide-react"
 import clsx from "clsx"
 import styles from './MobileHeader.module.scss'
 

@@ -4,7 +4,6 @@ import { useCalendarStore } from "@/entities/calendar";
 import type { TerminalProps } from "../model/types";
 import { TerminalHeaderIcons } from "./TerminalHeaderIcons";
 import { setDateText } from "../model/formatters";
-import clsx from "clsx";
 import styles from './Terminal.module.scss';
 
 const TerminalBase = forwardRef<HTMLDivElement, TerminalProps>((props, ref) => {
