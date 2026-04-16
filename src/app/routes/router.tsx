@@ -9,6 +9,7 @@ import { WeatherplayPage } from "@/pages/Mobile/Weatherplay";
 import { MobileMealPage } from "@/pages/Mobile";
 import { LogsPage } from "@/pages/Logs/ui/LogsPage";
 import { AppRoutes } from "@/shared/constants";
+import { GuidancePage } from "@/pages/Guidance/ui/GuidancePage";
 
 
 //mock pages
@@ -75,6 +76,13 @@ export const router = createBrowserRouter([
       {
         path: AppRoutes.LOGS,
         element: <LogsPage />,
+        handle: {
+          hideCharacter: true
+        }
+      },
+      {
+        path: AppRoutes.GUIDANCE,
+        element: <GuidancePage />,
         handle: {
           hideCharacter: true
         }

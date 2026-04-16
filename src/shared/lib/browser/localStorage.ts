@@ -1,11 +1,14 @@
 import type { User } from "@/entities/user";
 
-type DataType = 'isLoggedIn' | 'user' | 'token' | 'settings' | 'lastMeal';
+type DataType = 'isLoggedIn' | 'user' | 'token' | 'settings' | 'lastMeal' | 'guidance';
 type RemoveKey = Exclude<DataType, 'lastMeal'> | 'all';
 
 const PROJECT_NAME = 'amp-pet';
 const getStorageKey = (key: string) => `${PROJECT_NAME}-${key}`;
-const IMMUTABLE_KEYS = [getStorageKey('lastMeal')];
+
+const IMMUTABLE_DATA: DataType[] = ['lastMeal', 'guidance'];
+const IMMUTABLE_KEYS = IMMUTABLE_DATA.map(getStorageKey);
+// const IMMUTABLE_KEYS = [getStorageKey('lastMeal')];
 
 export const storage = {
   set: (key: DataType, value: any) => {

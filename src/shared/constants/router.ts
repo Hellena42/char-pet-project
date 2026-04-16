@@ -3,6 +3,7 @@ export const AppRoutes = {
   DASHBOARD: 'dashboard',
   AUTH: 'auth',
   LOGS: 'logs',
+  GUIDANCE: 'guidance',
   MOBILE: {
     CALENDAR: 'calendar',
     PRODUCTIVITY: 'productivity',

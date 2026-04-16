@@ -1,5 +1,5 @@
 import { AppRoutes } from "@/shared/constants";
-import { Home, Calendar, NotebookPen, CloudSun, Hamburger, SquareLibrary } from "lucide-react";
+import { Home, Calendar, NotebookPen, CloudSun, Hamburger, SquareLibrary, Cat } from "lucide-react";
 
 const DASHBOARD = AppRoutes.DASHBOARD;
 const MOBILE = AppRoutes.MOBILE;
@@ -36,5 +36,10 @@ export const links = [
     title: 'Logs',
     url: AppRoutes.LOGS,
     icon: SquareLibrary
+  },
+  {
+    title: '🔥Guidance',
+    url: AppRoutes.GUIDANCE,
+    icon: Cat
   },
 ];

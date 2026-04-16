@@ -13,7 +13,7 @@ export const CustomDay = (props: any) => {
           width: 30,
           height: 30,
           border: "2px solid #222",
-          fontFamily: "Comic Sans MS",
+          fontFamily: "Shantell Sans",
           fontSize: 12
         }}
       />

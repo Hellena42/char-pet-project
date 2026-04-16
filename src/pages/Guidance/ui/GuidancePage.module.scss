@@ -1,0 +1,104 @@
+.guidanceCardContainer {
+  display: flex;
+  justify-content: center;
+  transform: translateY(40%);
+
+  @media (max-width: 600px) {
+    transform: translateY(20%);
+  }
+}
+
+.swiperContainer {
+  width: 550px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.guidanceCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  min-height: 180px;
+  padding: 10px;
+  border: 2px solid #b07ea1;
+  border-radius: 8px;
+  background-color: rgb(176, 126, 161, 0.2);
+  backdrop-filter: blur(4px);
+
+  &__header {
+    display: flex;
+    margin-bottom: 5px;
+    padding: 6px 10px;
+    border-bottom: 1px solid #b07ea1;
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: vars.$ff-shantell-sans;
+      color: #f1e0e2;
+      margin-right: 15px;
+      border-radius: 50%;
+      border: 2px solid #cba8c1;
+    }
+
+    &__title {
+      font-family: vars.$ff-shantell-sans;
+      font-size: 14px;
+      color: #f9c996;
+      text-transform: uppercase;
+    }
+  }
+
+  &__content {
+    width: 75%;
+    font-family: vars.$ff-google-sans;
+    font-size: 14px;
+    color: #e5deeb;
+    z-index: 1;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
+    img {
+      width: 140px;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    &--high {
+      img {
+        width: 105px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    min-height: 300px;
+  }
+}
+
+.guidanceCardList {
+  li {
+    margin-bottom: 6px;
+  }
+}
+
+.linkBox {
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  color: #f1ec28eb;
+  text-align: center;
+  text-decoration: underline;
+}

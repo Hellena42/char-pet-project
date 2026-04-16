@@ -86,6 +86,7 @@
 //
 .footer {
   position: absolute;
+  display: flex;
   bottom: 10px;
   right: 20px;
 }
@@ -115,4 +116,35 @@
 
 .txtSm {
   color: #fff;
+}
+
+.footerLabel {
+  display: flex;
+  align-items: center;
+
+  span {
+    position: static;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #f6e8b2;
+    transform: translate(0, 10px);
+    border: 1px solid #e15757;
+    border-radius: 6px;
+    padding: 3px 5px;
+    background-color: rgb(225, 87, 199, 0.3);
+    backdrop-filter: blur(4px);
+  }
+}
+
+.alertLinkIcon {
+  margin-right: 10px;
+  font-size: 14px;
+  // color: #e15757;
+  color: #e8ae30;
+}
+
+.disabledBtn {
+  pointer-events: none;
+  opacity: 0.4;
 }

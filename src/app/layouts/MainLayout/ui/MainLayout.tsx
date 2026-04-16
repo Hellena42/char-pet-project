@@ -4,8 +4,9 @@ import { MainLayoutDesktop } from './MainLayoutDesktop';
 import { MainLayoutMobile } from './MainLayoutMobile';
 import { WeatherScene } from '@/widgets/WeatherEffects/ui/WeatherScene';
 import { useMoodStore } from '@/widgets/MoodIndicator/model/useMoodStore';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { AppRoutes } from '@/shared/constants';
+import { useGuidanceGuard } from '../model/useGuidanceGuard';
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' });
@@ -13,11 +14,17 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
   const animationType = selectedItem?.animationType;
 
   const location = useLocation();
-  const isLogs = location.pathname.includes(AppRoutes.LOGS)
+  const EXCLUDED_WEATHER_ROUTES = [AppRoutes.LOGS, AppRoutes.GUIDANCE];
+  const isAnimationDisabled = EXCLUDED_WEATHER_ROUTES.some(route => 
+    location.pathname.includes(route)
+  );
+
+  const { shouldRedirect, redirectPath } = useGuidanceGuard();
+  if (shouldRedirect) return <Navigate to={redirectPath} replace />;
 
   return (
     <>
-      {(animationType && !isLogs) && (
+      {(animationType && !isAnimationDisabled) && (
         <WeatherScene 
           type={animationType} 
         />

@@ -60,3 +60,9 @@
   pointer-events: none;
   opacity: 0.5;
 }
+
+.disabledItem {
+  pointer-events: none;
+  user-select: none;
+  filter: blur(4px);
+}

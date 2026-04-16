@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: var(--grid-layout);
   gap: 10px;
-  font-family: vars.$ff-comic-sans;
+  font-family: vars.$ff-shantell-sans;
   color: #fff;
   padding: 10px;
 }
@@ -39,7 +39,7 @@
 }
 
 .bodyRowMobile {
-  font-family: vars.$ff-comic-sans;
+  font-family: vars.$ff-shantell-sans;
   color: #cdbecc;
 }
 

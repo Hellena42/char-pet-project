@@ -27,3 +27,17 @@ body, #root {
 a {
   text-decoration: none;
 }
+
+.swiper {
+  --swiper-navigation-color: #d0ff01;
+  --swiper-navigation-size: 26px;
+  --swiper-pagination-color: #ff8e01;
+  --swiper-pagination-bullet-inactive-color: #999;
+  --swiper-pagination-fraction-color: #d0ff01;
+}
+
+.swiper-slide {
+  padding: 0 40px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}

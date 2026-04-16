@@ -19,6 +19,7 @@ export const Header = () => {
 
   const location = useLocation();
   const isLogsPage = location.pathname.includes(AppRoutes.LOGS);
+  const isGuidancePage = location.pathname.includes(AppRoutes.GUIDANCE);
 
   const handleLogout = () => {
     onLogout();
@@ -31,16 +32,37 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className={styles.header}>
-      <WeatherNode />
-      <BitcoinNode />
+    <header className={clsx(
+      styles.header
+    )}>
+      <div className={clsx({[styles.disabledItem]: isGuidancePage})}>
+        <WeatherNode />
+      </div>
+      
+      <div className={clsx({[styles.disabledItem]: isGuidancePage})}>
+        <BitcoinNode />
+      </div>
       {/* <MealsNode /> */}
       {/* <WeatherMoodSelect /> */}
 
-      <div className={clsx({[styles.disabledNode]: isLogsPage})}><MealsNode /></div>
-      <div className={clsx({[styles.disabledNode]: isLogsPage})}><WeatherMoodSelect /></div>
+      <div className={clsx({
+        [styles.disabledNode]: isLogsPage,
+        [styles.disabledItem]: isGuidancePage
+      })}>
+          <MealsNode />
+      </div>
 
-      <div className={styles.alertBox}>
+      <div className={clsx({
+        [styles.disabledNode]: isLogsPage,
+        [styles.disabledItem]: isGuidancePage
+      })}>
+          <WeatherMoodSelect />
+      </div>
+
+      <div className={clsx(
+        styles.alertBox,
+        {[styles.disabledItem]: isGuidancePage}
+      )}>
         <img className={styles.alertWrapperImg} src={RibbonImg} alt="" />
         <span className={styles.alertText}>{randomNum} days of neglect</span>
       </div>
