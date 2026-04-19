@@ -41,3 +41,11 @@ a {
   padding-bottom: 30px;
   box-sizing: border-box;
 }
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

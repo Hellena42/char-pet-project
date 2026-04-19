@@ -6,16 +6,12 @@ import { useLogParamsStore } from "@/pages/Logs/model/useLogParamsStore";
 
 export const useLogs = () => {
   const showLoader = useAppLoaderStore((state) => state.setLoading);
-  const params = useLogParamsStore();
+  const { page, limit, search, sortBy } = useLogParamsStore();
+  const fetchParams = { page, limit, search, sortBy };
 
   const query = useQuery({
-    queryKey: ['logs', params.page, params.limit, params.search, params.sortBy],
-    queryFn: () => fetchLogs({
-      page: params.page,
-      limit: params.limit,
-      search: params.search,
-      sortBy: params.sortBy
-    }),
+    queryKey: ['logs', fetchParams],
+    queryFn: () => fetchLogs(fetchParams),
     placeholderData: keepPreviousData
   })
 

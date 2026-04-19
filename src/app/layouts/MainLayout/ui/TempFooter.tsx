@@ -1,5 +1,5 @@
 import { AppRoutes } from '@/shared/constants';
-import { useLocation, NavLink } from 'react-router-dom';
+import { useLocation, NavLink, Link } from 'react-router-dom';
 import tvLogs from '../../../../assets/images/widget-icons/common/tv-logs.png'
 import { CircleAlert } from 'lucide-react';
 import { storage } from '@/shared/lib';
@@ -24,7 +24,7 @@ export const TempFooter = () => {
 
   return (
     <footer className={styles.footer}>
-      <NavLink
+      <Link
         title={'Guidance'}
         to={guidancePage ? AppRoutes.DASHBOARD : AppRoutes.GUIDANCE}
         className={clsx(
@@ -33,8 +33,8 @@ export const TempFooter = () => {
         )}
       >
         <span> <CircleAlert size={16} className={styles.alertLinkIcon} /> {guidancePage ? labels.guidanceBack : labels.guidance}</span>
-      </NavLink>
-      <NavLink
+      </Link>
+      <Link
         title={'Logs'}
         to={isLogsPage ? AppRoutes.DASHBOARD : AppRoutes.LOGS}
         className={clsx(
@@ -44,7 +44,7 @@ export const TempFooter = () => {
       >
         <img src={tvLogs} alt="" />
         <span>{isLogsPage ? logLabel.back : logLabel.dashboard}</span>
-      </NavLink>
+      </Link>
     </footer>
   )
 }
