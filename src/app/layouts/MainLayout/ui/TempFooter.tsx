@@ -1,5 +1,5 @@
 import { AppRoutes } from '@/shared/constants';
-import { useLocation, NavLink, Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import tvLogs from '../../../../assets/images/widget-icons/common/tv-logs.png'
 import { CircleAlert } from 'lucide-react';
 import { storage } from '@/shared/lib';
